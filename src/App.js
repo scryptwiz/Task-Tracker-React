@@ -114,7 +114,6 @@ const App = () => {
       <div className='md:w-2/5 xl:w-2/6 w-full md:max-h-screen pl-10 pr-2 py-7 bg-gray-800'>
         <div className='w-full h-full md:block flex flex-col justify-center overflow-y-auto pr-8'>
           <Header onAdd={()=>setShowAddTask(!showAddTask)} showAddTask={showAddTask}/>
-          {/* {showAddTask==true?<AddTask onAddTask={addTask}/>:''} */}
           {showAddTask && <AddTask onAddTask={addTask}/>}
           {tasks.length > 0 ? 
           <Tasks tasks={tasks} onDelete={deleteTask} onReminder={reminder}/> :<Message/>
